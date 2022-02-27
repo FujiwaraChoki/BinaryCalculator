@@ -21,6 +21,7 @@ public class Main extends IllegalMonitorStateException{
     }
 
     private void runCode() throws InterruptedException {
+        System.out.println("BITTE IMMER IN 16 BITS ANGEBEN, DANKE!");
         String option;
         do {
             // Input erste Binaer Zahl
@@ -34,18 +35,21 @@ public class Main extends IllegalMonitorStateException{
             System.out.println("1. Addition");
             System.out.println("2. Subtraktion");
             System.out.println("3. Multiplikation");
+            System.out.println("4. OR Operator");
+            System.out.println("5. XOR Operator");
+            System.out.println("6. AND Operator");
             switch(Integer.parseInt(scanner.nextLine())) {
                 case 1 -> additionBinaer(binaer1, binaer2);
                 case 2 -> subtraktionBinaer(binaer1, binaer2);
                 case 3 -> multiplikationBinaer(binaer1, binaer2);
+                case 4 -> orOp.run(binaer1, binaer2);
             }
             System.out.println("Another Calculation?");
-            System.out.println("y/no");
+            System.out.println("y/n");
             option = scanner.nextLine().toUpperCase();
         } while(option.equals("Y"));
         System.out.println("Program is closing...");
         wait(2);
-        exit();
     }
 
     public static void additionBinaer(String s, String s2) {
