@@ -43,6 +43,8 @@ public class Main extends IllegalMonitorStateException{
                 case 2 -> subtraktionBinaer(binaer1, binaer2);
                 case 3 -> multiplikationBinaer(binaer1, binaer2);
                 case 4 -> orOp.run(binaer1, binaer2);
+                case 5 -> xorOP.run(binaer1, binaer2);
+                case 6 -> andOP.run(binaer1, binaer2);
             }
             System.out.println("Another Calculation?");
             System.out.println("y/n");
@@ -91,10 +93,6 @@ public class Main extends IllegalMonitorStateException{
 
     public static String toBinary(int n) {
         return Integer.toBinaryString(n);
-    }
-
-    public static void exit() {
-        System.exit(0);
     }
 
     public static void wait(int seconds) throws InterruptedException {
