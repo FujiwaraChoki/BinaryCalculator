@@ -35,16 +35,18 @@ public class Main extends IllegalMonitorStateException{
             System.out.println("1. Addition");
             System.out.println("2. Subtraktion");
             System.out.println("3. Multiplikation");
-            System.out.println("4. OR Operator");
+            System.out.println("4. Division");
+            System.out.println("5. OR Operator");
             System.out.println("5. XOR Operator");
-            System.out.println("6. AND Operator");
+            System.out.println("7. AND Operator");
             switch(Integer.parseInt(scanner.nextLine())) {
                 case 1 -> additionBinaer(binaer1, binaer2);
                 case 2 -> subtraktionBinaer(binaer1, binaer2);
                 case 3 -> multiplikationBinaer(binaer1, binaer2);
-                case 4 -> orOp.run(binaer1, binaer2);
-                case 5 -> xorOP.run(binaer1, binaer2);
-                case 6 -> andOP.run(binaer1, binaer2);
+                case 4 -> divisionBinaer(binaer1, binaer2);
+                case 5 -> orOp.run(binaer1, binaer2);
+                case 6 -> xorOP.run(binaer1, binaer2);
+                case 7 -> andOP.run(binaer1, binaer2);
             }
             System.out.println("Another Calculation?");
             System.out.println("y/n");
@@ -89,6 +91,20 @@ public class Main extends IllegalMonitorStateException{
 
         String resultatInBinaer = toBinary(resultat);
         System.out.println("Produkt: " + resultatInBinaer);
+    }
+
+    public static void divisionBinaer(String s, String s2) {
+        int dividend = Integer.parseInt(s,2);
+        int divisor = Integer.parseInt(s2,2);
+        if(divisor!=0) {
+            String quotient = Integer.toBinaryString((dividend/divisor));
+            String remainder = Integer.toBinaryString((dividend%divisor));
+            System.out.println("Quotient: "+quotient);
+            System.out.println("Rest: "+remainder);
+        }
+        else {
+            System.out.println("Divisor kann nicht 0 sein!");
+        }
     }
 
     public static String toBinary(int n) {
