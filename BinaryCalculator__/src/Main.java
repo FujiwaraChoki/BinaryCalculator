@@ -39,6 +39,7 @@ public class Main extends IllegalMonitorStateException{
             System.out.println("5. OR Operator");
             System.out.println("5. XOR Operator");
             System.out.println("7. AND Operator");
+            System.out.println("8. TO HEXADECIMAL");
             switch(Integer.parseInt(scanner.nextLine())) {
                 case 1 -> additionBinaer(binaer1, binaer2);
                 case 2 -> subtraktionBinaer(binaer1, binaer2);
@@ -47,6 +48,8 @@ public class Main extends IllegalMonitorStateException{
                 case 5 -> orOp.run(binaer1, binaer2);
                 case 6 -> xorOP.run(binaer1, binaer2);
                 case 7 -> andOP.run(binaer1, binaer2);
+                case 8 -> makeColorTag.run();
+                default -> System.out.println("You're trying to use something that doesnt exist!");
             }
             System.out.println("Another Calculation?");
             System.out.println("y/n");
