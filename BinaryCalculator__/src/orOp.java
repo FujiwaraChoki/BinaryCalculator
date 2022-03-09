@@ -1,6 +1,6 @@
 public class orOp {
     public static void run(String binary1, String binary2) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         System.out.println("Binaer 1 -> " + binary1);
         System.out.println("Binaer 2 -> " + binary2);
         System.out.println("Operator -> OR");
@@ -8,13 +8,13 @@ public class orOp {
         char[] binary2Chars = binary2.toCharArray();
         for(int i=0; i<binary1Chars.length; i++) {
             if(binary1Chars[i] == '1' && binary2Chars[i] == '1') {
-                result += "1";
+                result.append("1");
             } else if(binary1Chars[i] == '1' && binary2Chars[i] == '0'){
-                result += "1";
+                result.append("1");
             } else if(binary1Chars[i] == '0' && binary2Chars[i] == '1') {
-                result += "1";
+                result.append("1");
             } else {
-                result += "0";
+                result.append("0");
             }
         }
         System.out.println("Ergebnis: "+result);
