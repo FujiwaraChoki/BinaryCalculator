@@ -41,6 +41,7 @@ public class Main extends IllegalMonitorStateException{
             System.out.println("7. AND Operator");
             System.out.println("8. TO COLOR TAG");
             System.out.println("9. TO HEX");
+            System.out.println("10. FROM HEX");
             switch(Integer.parseInt(scanner.nextLine())) {
                 case 1 -> additionBinaer(binaer1, binaer2);
                 case 2 -> subtraktionBinaer(binaer1, binaer2);
@@ -51,6 +52,7 @@ public class Main extends IllegalMonitorStateException{
                 case 7 -> andOP.run(binaer1, binaer2);
                 case 8 -> makeColorTag.run();
                 case 9 -> convertToHex.run();
+                case 10 -> convertFromHex.run();
                 default -> System.out.println("You're trying to use something that doesnt exist!");
             }
             System.out.println("Another Calculation?");
