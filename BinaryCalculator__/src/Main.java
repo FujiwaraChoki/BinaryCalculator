@@ -42,6 +42,7 @@ public class Main extends IllegalMonitorStateException{
             System.out.println("8. TO COLOR TAG");
             System.out.println("9. TO HEX");
             System.out.println("10. FROM HEX");
+            System.out.println("11. Kompressfaktor berechnen");
             switch(Integer.parseInt(scanner.nextLine())) {
                 case 1 -> additionBinaer(binaer1, binaer2);
                 case 2 -> subtraktionBinaer(binaer1, binaer2);
