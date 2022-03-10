@@ -54,6 +54,7 @@ public class Main extends IllegalMonitorStateException{
                 case 8 -> makeColorTag.run();
                 case 9 -> convertToHex.run();
                 case 10 -> convertFromHex.run();
+                case 11 -> kompressFaktorBerechnen.run();
                 default -> System.out.println("You're trying to use something that doesnt exist!");
             }
             System.out.println("Another Calculation?");
